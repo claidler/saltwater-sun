@@ -28,7 +28,7 @@ function App() {
       </div>
         <img src={logo} className="logo" alt="logo" />
         <iframe className="spotify" src="https://open.spotify.com/embed/album/2J6jqoCHru9GNwFxSGDdbu" id="spotifyWidget" width="100%"
-        height="90px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        height="90px" frameborder="0" allowtransparency="false" allow="encrypted-media"></iframe>
         <div className="dates-container">
         {dates &&
           dates.map(date => (

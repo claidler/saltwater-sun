@@ -64,3 +64,51 @@ a {
   transform: translateY(800px);
   padding-bottom: 200px;
 }
+
+@media (max-width:380px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .App {
+    background: url('./saltwatersun-bg.jpg') no-repeat fixed;
+    height: 100vh;
+    width: auto;
+    -webkit-background-size: contain, cover;
+  -moz-background-size: contain, cover;
+  -o-background-size: contain, cover;
+  background-size: contain, cover;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .logo {
+    width: 70%;
+    bottom: 450px;
+  }
+  .dates-container{
+    transform: translateY(380px);
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width:380px) and (max-width: 420px)  { 
+  .App {
+    background: url('./saltwatersun-bg.jpg') no-repeat fixed;
+    height: 100vh;
+    width: auto;
+    -webkit-background-size: contain, cover;
+  -moz-background-size: contain, cover;
+  -o-background-size: contain, cover;
+  background-size: contain, cover;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .logo {
+    width: 70%;
+    bottom: 380px;
+  }
+  .dates-container{
+    transform: translateY(470px);
+    padding-bottom: 150px;
+  }
+}
