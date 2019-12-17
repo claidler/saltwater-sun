@@ -1,42 +1,35 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({imageData}) => (
+    <div style={{
+        display: 'flex', 
+        flexDirection: 'row', 
+        justifyContent: 'space-around', 
+        padding: '10px 0', 
+        backgroundColor: 'rgba(0, 0, 0, 0.40)'
+    }}>
+    <a href="https://itunes.apple.com/gb/artist/saltwater-sun/985399697" target="_blank">
+        <Img fixed={imageData.apple.childImageSharp.fixed} />
+    </a>
+    <a href="https://www.facebook.com/saltwtrsun/" target="_blank">
+        <Img fixed={imageData.facebook.childImageSharp.fixed} />
+    </a>
+    <a href="https://www.instagram.com/saltwater_sun" target="_blank">
+        <Img fixed={imageData.instagram.childImageSharp.fixed} />
+    </a>
+    <a href="https://soundcloud.com/saltwater-sun" target="_blank">
+        <Img fixed={imageData.soundcloud.childImageSharp.fixed} />
+    </a>
+    <a href="https://open.spotify.com/artist/4N8Ccd33SHnh2cNlojKYBv?si=i4U3MdnHSI6bZPKHbO7KIw" target="_blank">
+        <Img fixed={imageData.spotify.childImageSharp.fixed} />
+    </a>
+    <a href="https://twitter.com/saltwater_sun" target="_blank">
+        <Img fixed={imageData.twitter.childImageSharp.fixed} />
+    </a>
+    <a href="https://saltwatersun.bigcartel.com/" target="_blank">
+        <Img fixed={imageData.shop.childImageSharp.fixed} />
+    </a>
     </div>
-  </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
